@@ -1,0 +1,20 @@
+---
+description: Este repositório Git é a única fonte oficial do Studio Elegancy.
+alwaysApply: true
+---
+
+# Fonte oficial
+
+Este repositório GitHub (`Jessica-Franca/studio-elegancy`) é a única fonte de verdade do Studio Elegancy.
+
+Todo novo desenvolvimento do protótipo web deve acontecer aqui, em `prototipo-ui/`.
+
+Não criar nem utilizar uma cópia independente do `prototipo-ui` como fonte de edição.
+
+Antes de iniciar uma tarefa, verificar o Git root e `git status`.
+
+Depois de testar, revisar o diff e versionar no Git.
+
+Não alterar legado Python/PySide6/SQLite sem instrução explícita.
+
+Não commitar `DocsCliente/`, `.env`, credenciais, `Auditorias/` internas ou dados reais de clientes.

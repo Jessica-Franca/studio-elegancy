@@ -814,3 +814,15 @@
     grid-template-columns: 64px 1fr;
   }
 }
+
+@media (max-width: 720px) {
+  .modal-backdrop {
+    padding: 12px;
+    align-items: start;
+    overflow: auto;
+  }
+
+  .modal {
+    max-height: calc(100dvh - 24px);
+  }
+}

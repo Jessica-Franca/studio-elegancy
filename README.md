@@ -1,58 +1,47 @@
-# Studio Elegancy — protótipo web
+# Studio Elegancy
 
-Protótipo front-end de gestão de estúdio de beleza (HTML, CSS, JavaScript e `localStorage`).
+Este repositório GitHub é a **fonte oficial** do Studio Elegancy.
 
-Não há backend, API, banco de dados nem autenticação real. Os dados ficam no navegador de cada pessoa que testa.
+O produto nesta etapa é um **protótipo web** (HTML, CSS, JavaScript e `localStorage`). Não há backend, API, banco de dados nem autenticação real.
 
-Slogan: **Beleza que te representa.**
+## Onde está o protótipo
 
-## URL pública
+```text
+prototipo-ui/
+```
 
-https://jessica-franca.github.io/studio-elegancy/
+É a única implementação oficial da interface.
 
-Na primeira publicação, o GitHub precisa de um clique para ligar o Pages:
+## Como executar
 
-1. Abra [Settings → Pages](https://github.com/Jessica-Franca/studio-elegancy/settings/pages).
-2. Em **Build and deployment**, escolha **Source: GitHub Actions**.
-3. Reexecute o workflow [Deploy GitHub Pages](https://github.com/Jessica-Franca/studio-elegancy/actions/workflows/pages.yml).
-
-Depois disso, cada push em `main` atualiza o site.
-
-## Como testar
-
-Abra a URL acima no navegador. Na primeira visita o protótipo carrega uma massa **fictícia** de clientes, serviços, agendamentos e retornos.
-
-Os dados são locais: cada dispositivo/navegador tem a própria cópia. Limpar o armazenamento do site volta ao seed inicial.
-
-Não use dados reais de clientes neste ambiente.
-
-## Telas
-
-- `index.html` — Início / Dashboard
-- `agenda.html` — Dia, Semana, Mês e período
-- `clientes.html` — Lista e perfil
-- `retornos.html` — Ciclos de manutenção e acompanhamento
-- `servicos.html` — Catálogo Unhas / Cílios / Sobrancelhas
-- `relatorios.html` — Estrutura de relatórios
-- `configuracoes.html` — Ajustes
-- `login.html` — Tela de demonstração (os dois botões abrem o mesmo protótipo)
-
-## Persistência
-
-- `studioElegancy_clientes`
-- `studioElegancy_agendamentos`
-- `studioElegancy_anamneses`
-- `studioElegancy_servicos`
-- `studioElegancy_manutencoes`
-
-## Abrir no computador
-
-Sirva a pasta do repositório (não abra o arquivo como `file://` se o navegador bloquear módulos ou caminhos).
+Na pasta `prototipo-ui/`:
 
 ```bash
 npx --yes serve .
 ```
 
-## Design
+Abra o endereço que o comando mostrar (por exemplo `http://localhost:3000`).
 
-`css/tokens.css` concentra paleta e fontes (Playfair Display, Inter, Great Vibes no slogan).
+## Publicação
+
+O GitHub Pages publica o conteúdo de `prototipo-ui/`:
+
+https://jessica-franca.github.io/studio-elegancy/
+
+## Fluxo de desenvolvimento
+
+1. Verificar o Git root e `git status`.
+2. Editar somente neste repositório, em `prototipo-ui/`.
+3. Testar no navegador.
+4. Revisar `git diff`.
+5. Commit e push em `main`.
+6. As testers usam a URL pública.
+
+Não desenvolver em uma cópia avulsa do `prototipo-ui` nem sincronizar pastas manualmente.
+
+## O que não entra neste repositório
+
+- dados reais de clientes
+- `DocsCliente/` (material local da cliente)
+- `studio_elegancy/` (legado Python/PySide6, se existir só na máquina)
+- credenciais, `.env`, chaves

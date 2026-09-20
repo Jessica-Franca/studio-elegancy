@@ -2119,12 +2119,34 @@
 }
 
 .return-table {
-  min-width: 1180px;
+  min-width: 1100px;
+}
+
+.return-table .return-actions {
+  width: 1%;
+  white-space: nowrap;
 }
 
 .return-table .return-actions .btn-row {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+}
+
+.return-table .return-actions .btn {
+  flex: 0 0 auto;
+  width: auto;
+  min-height: 32px;
+  padding: 5px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.btn-label-short {
+  display: none;
 }
 
 .return-history-block {
@@ -2596,6 +2618,247 @@
 
   .dash-return-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  body[data-page="retornos"] .agenda-toolbar .segments {
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-right: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  body[data-page="retornos"] .segment {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  body[data-page="retornos"] .agenda-filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  body[data-page="retornos"] .agenda-filter {
+    min-width: 0;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  body[data-page="retornos"] .agenda-filter .select,
+  body[data-page="retornos"] .agenda-filter .input {
+    min-height: 40px;
+    width: 100%;
+  }
+
+  body[data-page="retornos"] .agenda-filters .btn {
+    width: 100%;
+    min-height: 40px;
+    margin-bottom: 0;
+  }
+
+  .return-table-wrap {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  .return-table {
+    display: block;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .return-table thead {
+    display: none;
+  }
+
+  .return-table tbody {
+    display: grid;
+    gap: 12px;
+  }
+
+  .return-table tbody tr.return-record {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "client sit"
+      "svc pro"
+      "date date"
+      "ultimo ultimo"
+      "contato contato"
+      "next next"
+      "actions actions";
+    gap: 6px 10px;
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--white);
+    cursor: default;
+  }
+
+  .return-table tbody tr.return-record:hover {
+    background: #fdf8f6;
+  }
+
+  .return-table th,
+  .return-table td,
+  .return-table tbody tr:last-child td,
+  .return-table tbody tr.return-record:hover td {
+    display: block;
+    width: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    white-space: normal;
+    font-size: 14px;
+  }
+
+  .return-cell-client {
+    grid-area: client;
+    min-width: 0;
+  }
+
+  .return-cell-client .appt-name {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .return-cell-sit {
+    grid-area: sit;
+    justify-self: end;
+    align-self: start;
+  }
+
+  .return-cell-svc {
+    grid-area: svc;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .return-cell-pro {
+    grid-area: pro;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: right;
+  }
+
+  .return-cell-date {
+    grid-area: date;
+  }
+
+  .return-cell-ultimo {
+    grid-area: ultimo;
+  }
+
+  .return-cell-contato {
+    grid-area: contato;
+  }
+
+  .return-cell-acao {
+    grid-area: next;
+  }
+
+  .return-table .return-actions {
+    grid-area: actions;
+    width: auto;
+    white-space: normal;
+    padding-top: 10px;
+    margin-top: 4px;
+    border-top: 1px solid var(--line);
+  }
+
+  .return-table td.return-cell-date,
+  .return-table td.return-cell-ultimo,
+  .return-table td.return-cell-contato,
+  .return-table td.return-cell-acao {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 2px;
+  }
+
+  .return-table td[data-label]::before {
+    content: attr(data-label);
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    flex: 0 1 auto;
+    margin-right: auto;
+    padding-right: 10px;
+  }
+
+  .return-cell-client::before,
+  .return-cell-svc::before,
+  .return-cell-pro::before,
+  .return-cell-sit::before,
+  .return-actions::before {
+    display: none;
+  }
+
+  .return-table .return-actions .btn-row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .return-table .return-actions .btn {
+    min-height: 40px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .return-actions .btn-label-long {
+    display: none;
+  }
+
+  .return-actions .btn-label-short {
+    display: inline;
+  }
+
+  .composer-top,
+  .composer-grid {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .composer {
+    max-height: calc(100dvh - 24px);
+  }
+
+  #modal-return-history .btn-row,
+  #modal-maint-contact .btn-row {
+    flex-wrap: wrap;
+  }
+
+  #modal-return-history .modal,
+  #modal-maint-contact .modal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #return-history-body,
+  #maint-contact-form {
+    min-height: 0;
+    overflow: auto;
+    flex: 1 1 auto;
+  }
+
+  #modal-return-history .modal > .btn-row,
+  #maint-contact-form > .btn-row {
+    flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
+    padding-top: 10px;
+    background: var(--canvas);
   }
 }
 

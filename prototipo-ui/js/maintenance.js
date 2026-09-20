@@ -1645,7 +1645,7 @@
     if (item.status !== "pendente") return history;
     return `
       ${history}
-      <button class="btn btn--secondary" type="button" data-maint-contact="${esc(item.id)}">Registrar contato</button>
+      <button class="btn btn--secondary" type="button" data-maint-contact="${esc(item.id)}"><span class="btn-label-long">Registrar contato</span><span class="btn-label-short">Contato</span></button>
       <button class="btn btn--primary" type="button" data-maint-schedule="${esc(item.id)}">Agendar</button>
     `;
   }
@@ -1662,16 +1662,16 @@
     const name = item.clienteNome || clientName(item.clienteId);
     const compact = opts.compact !== false;
     return `
-      <tr class="agenda-row tone-${esc(sit.tone)}">
-        <td>${esc(when)}</td>
-        <td><a class="appt-name" href="clientes.html?cliente=${encodeURIComponent(item.clienteId)}#cliente=${encodeURIComponent(item.clienteId)}">${esc(name)}</a></td>
-        <td>${esc(item.servicoNome || item.servicoManutencaoNome || item.servicoOriginalNome)}</td>
-        <td>${esc(item.profissional || "—")}</td>
-        <td>${esc(originLabel)}</td>
-        <td>${situationPill(item)}</td>
-        <td>${esc(lastContact)}</td>
-        <td>${esc(next.text)}</td>
-        ${compact ? `<td class="return-actions"><div class="btn-row">${followButtons(item)}</div></td>` : ""}
+      <tr class="agenda-row return-record tone-${esc(sit.tone)}">
+        <td class="return-cell-date" data-label="Retorno">${esc(when)}</td>
+        <td class="return-cell-client" data-label="Cliente"><a class="appt-name" href="clientes.html?cliente=${encodeURIComponent(item.clienteId)}#cliente=${encodeURIComponent(item.clienteId)}">${esc(name)}</a></td>
+        <td class="return-cell-svc" data-label="Serviço">${esc(item.servicoNome || item.servicoManutencaoNome || item.servicoOriginalNome)}</td>
+        <td class="return-cell-pro" data-label="Profissional">${esc(item.profissional || "—")}</td>
+        <td class="return-cell-ultimo" data-label="Último atendimento">${esc(originLabel)}</td>
+        <td class="return-cell-sit" data-label="Situação">${situationPill(item)}</td>
+        <td class="return-cell-contato" data-label="Último contato">${esc(lastContact)}</td>
+        <td class="return-cell-acao" data-label="Próxima ação">${esc(next.text)}</td>
+        ${compact ? `<td class="return-actions" data-label="Ações"><div class="btn-row">${followButtons(item)}</div></td>` : ""}
       </tr>
     `;
   }
