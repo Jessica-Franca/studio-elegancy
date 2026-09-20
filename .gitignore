@@ -1,0 +1,13 @@
+Auditorias/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials.*
+secrets.*
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

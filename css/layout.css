@@ -1,0 +1,173 @@
+.app-body {
+  min-height: 100vh;
+}
+
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  width: var(--sidebar-width);
+  min-height: 100vh;
+  padding: 28px 22px 20px;
+  background: var(--white);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.brand-heart {
+  color: var(--rose);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.brand-studio {
+  margin-top: 10px;
+  font-family: var(--font-display);
+  color: var(--rose-burn);
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  color: var(--brown);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.brand-slogan {
+  margin-top: 6px;
+  font-family: var(--font-script);
+  color: var(--rose-burn);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.sidebar-rule {
+  height: 1px;
+  margin: 16px 0;
+  background: var(--rose-light);
+  border: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--brown);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+  flex-shrink: 0;
+}
+
+.nav-link:hover {
+  background: var(--canvas);
+}
+
+.nav-link.is-active {
+  background: var(--blush);
+  color: var(--brown);
+  font-weight: 600;
+}
+
+.nav-link.is-soon {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.nav-spacer {
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 20px 28px 32px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.page-subtitle {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.header-rule {
+  width: 88px;
+  height: 1px;
+  margin-top: 10px;
+  background: var(--rose-light);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(280px, 2fr) minmax(360px, 3fr);
+  gap: 16px;
+  min-height: calc(100vh - 160px);
+}
+
+.split--clientes {
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .split,
+  .split--clientes {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    width: 88px;
+    padding: 20px 12px;
+  }
+
+  .brand-studio,
+  .brand-name,
+  .brand-slogan,
+  .nav-link span {
+    display: none;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+}

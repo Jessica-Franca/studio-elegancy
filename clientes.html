@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clientes · Studio Elegancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css?v=crm1">
+  <link rel="stylesheet" href="css/components.css?v=sync1">
+  <link rel="stylesheet" href="css/pages.css?v=tbl1">
+</head>
+<body class="app-body" data-page="clientes">
+  <main class="content">
+    <header class="page-header">
+      <div>
+        <h1 class="page-title">Clientes</h1>
+        <p class="page-subtitle">Conheça e acompanhe as mulheres do Studio.</p>
+        <div class="header-rule"></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn--secondary" id="new-client" type="button">+ Nova cliente</button>
+        <button class="btn btn--primary" data-open-new-appt type="button">+ Novo agendamento</button>
+      </div>
+    </header>
+
+    <section id="crm-list">
+      <div class="crm-toolbar">
+        <input class="input search" id="client-search" type="search" placeholder="Buscar por nome, telefone ou documento...">
+      </div>
+      <div class="crm-counters" id="client-filters"></div>
+      <div class="agenda-filters crm-filters" id="crm-table-filters">
+        <label class="agenda-filter">
+          <span>Status do cadastro</span>
+          <select class="select" id="filter-cadastro">
+            <option value="todos">Todos</option>
+            <option value="completo">Cadastro completo</option>
+            <option value="incompleto">Cadastro incompleto</option>
+          </select>
+        </label>
+        <label class="agenda-filter">
+          <span>Anamnese</span>
+          <select class="select" id="filter-anamnese">
+            <option value="todas">Todas</option>
+            <option value="completa">Completa</option>
+            <option value="pendente">Pendente</option>
+          </select>
+        </label>
+        <label class="agenda-filter">
+          <span>Retorno</span>
+          <select class="select" id="filter-retorno">
+            <option value="todos">Todos</option>
+            <option value="oferecer">Sem retorno agendado</option>
+            <option value="agendado">Retorno agendado</option>
+            <option value="vencido">Vencido</option>
+          </select>
+        </label>
+        <label class="agenda-filter">
+          <span>Profissional</span>
+          <select class="select" id="filter-pro">
+            <option value="todas">Todas</option>
+            <option value="Bruna">Bruna</option>
+            <option value="Amanda">Amanda</option>
+          </select>
+        </label>
+        <button class="btn btn--secondary" id="crm-clear" type="button">Limpar filtros</button>
+      </div>
+      <p class="hint crm-count" id="crm-count"></p>
+      <div id="client-table"></div>
+    </section>
+
+    <section id="crm-profile" hidden></section>
+  </main>
+  <script src="js/data.js?v=pub1"></script>
+  <script src="js/demo-seed.js?v=pub1"></script>
+  <script src="js/state.js?v=pub1"></script>
+  <script src="js/catalog.js?v=svc5"></script>
+  <script src="js/availability.js?v=av1"></script>
+  <script src="js/shell.js?v=se1"></script>
+  <script src="js/tables.js?v=tbl1"></script>
+  <script src="js/appointments.js?v=tbl1"></script>
+  <script src="js/maintenance.js?v=tbl1"></script>
+  <script src="js/clients-form.js?v=et5"></script>
+  <script src="js/new-appointment.js?v=svc5"></script>
+  <script src="js/anamnese.js?v=et5"></script>
+  <script src="js/clients.js?v=tbl1"></script>
+</body>
+</html>

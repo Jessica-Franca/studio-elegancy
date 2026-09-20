@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retornos · Studio Elegancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css?v=tbl1">
+</head>
+<body class="app-body" data-page="retornos">
+  <main class="content">
+    <header class="page-header">
+      <div>
+        <h1 class="page-title">Retornos</h1>
+        <p class="page-subtitle">Acompanhe clientes que precisam retornar ao Studio.</p>
+        <div class="header-rule"></div>
+      </div>
+    </header>
+    <div class="agenda-toolbar">
+      <div class="segments" id="returns-filters">
+        <button class="segment is-active" type="button" data-return-filter="todas">Todos</button>
+        <button class="segment" type="button" data-return-filter="vencida">Vencidos</button>
+        <button class="segment" type="button" data-return-filter="proxima">Próximos</button>
+        <button class="segment" type="button" data-return-filter="sem_contato">Sem contato</button>
+        <button class="segment" type="button" data-return-filter="aguardando">Aguardando retorno</button>
+      </div>
+    </div>
+    <div class="agenda-filters" id="returns-extra-filters">
+      <label class="agenda-filter">
+        <span>Cliente</span>
+        <select class="select" id="ret-filter-client"></select>
+      </label>
+      <label class="agenda-filter">
+        <span>Profissional</span>
+        <select class="select" id="ret-filter-pro">
+          <option value="">Todas</option>
+          <option value="Amanda">Amanda</option>
+          <option value="Bruna">Bruna</option>
+        </select>
+      </label>
+      <label class="agenda-filter">
+        <span>Serviço</span>
+        <select class="select" id="ret-filter-svc"></select>
+      </label>
+      <label class="agenda-filter">
+        <span>Situação</span>
+        <select class="select" id="ret-filter-sit">
+          <option value="">Todas</option>
+          <option value="vencido">Vencido</option>
+          <option value="proximo">Próximo</option>
+          <option value="sem_contato">Sem contato</option>
+          <option value="aguardando">Aguardando retorno</option>
+          <option value="agendado">Agendado</option>
+          <option value="encerrado">Encerrado</option>
+        </select>
+      </label>
+      <label class="agenda-filter">
+        <span>De</span>
+        <input class="input" id="ret-filter-from" type="date">
+      </label>
+      <label class="agenda-filter">
+        <span>Até</span>
+        <input class="input" id="ret-filter-to" type="date">
+      </label>
+      <button class="btn btn--secondary" id="ret-filter-clear" type="button">Limpar filtros</button>
+    </div>
+    <p class="hint crm-count" id="returns-count"></p>
+    <div id="returns-list"></div>
+  </main>
+  <script src="js/data.js?v=pub1"></script>
+  <script src="js/demo-seed.js?v=pub1"></script>
+  <script src="js/state.js?v=pub1"></script>
+  <script src="js/catalog.js?v=svc5"></script>
+  <script src="js/availability.js?v=av1"></script>
+  <script src="js/shell.js?v=ret1"></script>
+  <script src="js/tables.js?v=tbl1"></script>
+  <script src="js/appointments.js?v=tbl1"></script>
+  <script src="js/maintenance.js?v=tbl1"></script>
+  <script src="js/clients-form.js?v=et5"></script>
+  <script src="js/anamnese.js?v=et5"></script>
+  <script src="js/new-appointment.js?v=svc5"></script>
+</body>
+</html>

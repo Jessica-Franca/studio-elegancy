@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início · Studio Elegancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css?v=dash1">
+</head>
+<body class="app-body" data-page="inicio">
+  <main class="content">
+    <section class="card welcome">
+      <span class="kicker">Studio Elegancy</span>
+      <h1 class="greeting" data-greeting>Bom dia.</h1>
+      <p class="greeting-slogan">Beleza que te representa.</p>
+      <p>Como está o Studio neste período e o que precisa da sua atenção.</p>
+      <div class="period">
+        <div class="field" style="min-width:220px">
+          <label for="period-select">Período</label>
+          <select class="select" id="period-select">
+            <option value="hoje">Hoje</option>
+            <option value="esta-semana">Esta semana</option>
+            <option value="mes-atual" selected>Este mês</option>
+            <option value="proximo-mes">Próximo mês</option>
+            <option value="personalizado">Personalizado</option>
+          </select>
+        </div>
+        <div id="period-custom" hidden>
+          <div class="btn-row">
+            <input class="input" id="period-from" type="date">
+            <input class="input" id="period-to" type="date">
+          </div>
+        </div>
+        <p class="period-hint" id="period-hint">Este mês</p>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <article class="card metric">
+        <span class="kicker">Realizado</span>
+        <div class="metric-value" id="metric-realized">R$ 0,00</div>
+        <p class="metric-hint">Atendimentos concluídos no período</p>
+      </article>
+      <article class="card metric">
+        <span class="kicker">Previsto</span>
+        <div class="metric-value" id="metric-forecast">R$ 0,00</div>
+        <p class="metric-hint">Agendado e confirmado à frente</p>
+      </article>
+      <article class="card metric">
+        <span class="kicker">Projeção</span>
+        <div class="metric-value" id="metric-projection">R$ 0,00</div>
+        <p class="metric-hint">Realizado + previsto</p>
+      </article>
+    </section>
+
+    <section class="stats">
+      <article class="card stat-pill">
+        <div>
+          <span class="kicker">Clientes ativos</span>
+          <div class="stat-value" id="stat-clients">0</div>
+        </div>
+        <span class="hint">Cadastros ativos</span>
+      </article>
+      <article class="card stat-pill">
+        <div>
+          <span class="kicker">Atendimentos</span>
+          <div class="stat-value" id="stat-appts">0</div>
+        </div>
+        <span class="hint">Exceto cancelados</span>
+      </article>
+    </section>
+
+    <section class="card card--pad dash-attention">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Retornos / Atenção</h2>
+          <p class="hint">Pendências resumidas. O detalhe continua em Retornos.</p>
+        </div>
+      </div>
+      <div class="dash-return-grid" id="dash-return-cards"></div>
+    </section>
+
+    <section class="main-grid">
+      <article class="card card--pad">
+        <div class="section-head">
+          <h2 class="section-title">Próximos atendimentos</h2>
+          <a class="btn btn--secondary" href="agenda.html">Ver agenda</a>
+        </div>
+        <div class="appt-list" id="dashboard-upcoming"></div>
+      </article>
+
+      <article class="card chart-block">
+        <h2 class="section-title">Bruna e Amanda</h2>
+        <p class="hint">Valores por profissional no período selecionado, a partir dos serviços de cada atendimento.</p>
+        <div class="chart-row">
+          <div class="chart-name">Bruna</div>
+          <div class="chart-line">
+            <span>Realizado</span>
+            <div class="chart-track"><div class="chart-fill is-realized" id="chart-bruna-real-bar" style="width:0%"></div></div>
+            <strong id="chart-bruna-real">R$ 0,00</strong>
+          </div>
+          <div class="chart-line">
+            <span>Previsto</span>
+            <div class="chart-track"><div class="chart-fill is-forecast" id="chart-bruna-prev-bar" style="width:0%"></div></div>
+            <strong id="chart-bruna-prev">R$ 0,00</strong>
+          </div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-name">Amanda</div>
+          <div class="chart-line">
+            <span>Realizado</span>
+            <div class="chart-track"><div class="chart-fill is-realized" id="chart-amanda-real-bar" style="width:0%"></div></div>
+            <strong id="chart-amanda-real">R$ 0,00</strong>
+          </div>
+          <div class="chart-line">
+            <span>Previsto</span>
+            <div class="chart-track"><div class="chart-fill is-forecast" id="chart-amanda-prev-bar" style="width:0%"></div></div>
+            <strong id="chart-amanda-prev">R$ 0,00</strong>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="card footer-grid">
+      <div>
+        <span class="kicker">Procedimento mais realizado</span>
+        <p class="appt-price" style="font-size:16px" id="dashboard-top-service">—</p>
+      </div>
+      <div id="dashboard-next">
+        <span class="kicker">Próximo horário</span>
+        <p class="appt-price" style="font-size:16px" id="dashboard-next-text"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js?v=pub1"></script>
+  <script src="js/demo-seed.js?v=pub1"></script>
+  <script src="js/state.js?v=pub1"></script>
+  <script src="js/catalog.js?v=svc5"></script>
+  <script src="js/availability.js?v=av1"></script>
+  <script src="js/shell.js?v=ret1"></script>
+  <script src="js/appointments.js?v=svc5"></script>
+  <script src="js/maintenance.js?v=dash2"></script>
+  <script src="js/clients-form.js?v=et5"></script>
+  <script src="js/anamnese.js?v=et5"></script>
+  <script src="js/new-appointment.js?v=svc5"></script>
+  <script src="js/app.js?v=dash2"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar · Studio Elegancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-shell="off" data-page="login">
+  <main class="login-page">
+    <section class="card login-card">
+      <div class="brand-heart">♡</div>
+      <div class="brand-studio">STUDIO</div>
+      <div class="brand-name">ELEGANCY</div>
+      <p class="brand-slogan">Beleza que te representa.</p>
+      <p class="hint" style="margin-top:16px">Tela de demonstração. Não há autenticação real e os botões não separam perfis — os dois abrem o mesmo protótipo.</p>
+      <div class="login-actions">
+        <button class="btn btn--primary" type="button" id="enter-bruna">Entrar (demonstração)</button>
+        <button class="btn btn--secondary" type="button" id="enter-amanda">Entrar (demonstração)</button>
+        <a class="btn btn--ghost" href="index.html">Voltar ao protótipo</a>
+      </div>
+    </section>
+  </main>
+  <script src="js/data.js?v=pub1"></script>
+  <script src="js/demo-seed.js?v=pub1"></script>
+  <script src="js/state.js?v=pub1"></script>
+  <script src="js/catalog.js?v=svc5"></script>
+  <script src="js/availability.js?v=av1"></script>
+  <script src="js/appointments.js?v=svc5"></script>
+  <script>
+    function go() {
+      window.location.href = "index.html";
+    }
+    document.getElementById("enter-bruna").addEventListener("click", go);
+    document.getElementById("enter-amanda").addEventListener("click", go);
+  </script>
+</body>
+</html>

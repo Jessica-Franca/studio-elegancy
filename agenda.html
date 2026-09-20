@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda · Studio Elegancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css?v=lista1">
+  <link rel="stylesheet" href="css/components.css?v=sync1">
+  <link rel="stylesheet" href="css/pages.css?v=tbl1">
+</head>
+<body class="app-body" data-page="agenda">
+  <main class="content">
+    <header class="page-header">
+      <div>
+        <h1 class="page-title">Agenda</h1>
+        <p class="page-subtitle">A agenda do Studio, por dia, semana e mês.</p>
+        <div class="header-rule"></div>
+      </div>
+      <button class="btn btn--primary" id="new-appt" data-open-new-appt type="button">+ Novo agendamento</button>
+    </header>
+    <div class="agenda-toolbar">
+      <div class="segments">
+        <button class="segment is-active" data-mode="day" type="button">Dia</button>
+        <button class="segment" data-mode="week" type="button">Semana</button>
+        <button class="segment" data-mode="month" type="button">Mês</button>
+        <button class="segment" data-mode="range" type="button" aria-label="Período personalizado">Período</button>
+      </div>
+      <div class="agenda-nav" id="agenda-nav-standard">
+        <button class="btn btn--ghost" id="agenda-prev" type="button">Ontem</button>
+        <button class="btn btn--secondary" id="agenda-current" type="button">Hoje</button>
+        <button class="btn btn--ghost" id="agenda-next" type="button">Amanhã</button>
+        <label class="agenda-datepick" id="agenda-pick-wrap">
+          <span aria-hidden="true">📅</span>
+          <span id="agenda-pick-label">Escolher dia</span>
+          <input id="agenda-date" type="date" aria-label="Escolher dia">
+        </label>
+        <label class="agenda-datepick" id="agenda-month-wrap" hidden>
+          <span aria-hidden="true">📅</span>
+          <span>Escolher mês</span>
+          <input id="agenda-month" type="month" aria-label="Escolher mês">
+        </label>
+      </div>
+    </div>
+    <div class="agenda-range" id="agenda-range-bar" hidden>
+      <label class="agenda-filter">
+        <span>Data inicial</span>
+        <input class="input" id="range-start" type="date">
+      </label>
+      <label class="agenda-filter">
+        <span>Data final</span>
+        <input class="input" id="range-end" type="date">
+      </label>
+      <button class="btn btn--primary" id="range-apply" type="button">Aplicar período</button>
+      <button class="btn btn--secondary" id="range-clear" type="button">Limpar período</button>
+    </div>
+    <p class="hint agenda-range-error" id="range-error" hidden>Informe a data inicial e a data final para consultar o período.</p>
+    <div class="agenda-filters" id="agenda-filters">
+      <div class="ms" data-ms="profissional"></div>
+      <div class="ms" data-ms="cliente"></div>
+      <div class="ms" data-ms="servico"></div>
+      <div class="ms" data-ms="status"></div>
+      <button class="btn btn--secondary" id="agenda-clear" type="button">Limpar filtros</button>
+    </div>
+    <div id="agenda-root"></div>
+  </main>
+  <script src="js/data.js?v=pub1"></script>
+  <script src="js/demo-seed.js?v=pub1"></script>
+  <script src="js/state.js?v=pub1"></script>
+  <script src="js/catalog.js?v=svc5"></script>
+  <script src="js/availability.js?v=av1"></script>
+  <script src="js/shell.js?v=se1"></script>
+  <script src="js/tables.js?v=tbl1"></script>
+  <script src="js/appointments.js?v=tbl1"></script>
+  <script src="js/maintenance.js?v=tbl1"></script>
+  <script src="js/clients-form.js?v=et5"></script>
+  <script src="js/anamnese.js?v=et5"></script>
+  <script src="js/agenda.js?v=tbl1"></script>
+  <script src="js/new-appointment.js?v=svc5"></script>
+</body>
+</html>
