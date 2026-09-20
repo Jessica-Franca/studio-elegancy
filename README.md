@@ -10,6 +10,14 @@ Slogan: **Beleza que te representa.**
 
 https://jessica-franca.github.io/studio-elegancy/
 
+Na primeira publicação, o GitHub precisa de um clique para ligar o Pages:
+
+1. Abra [Settings → Pages](https://github.com/Jessica-Franca/studio-elegancy/settings/pages).
+2. Em **Build and deployment**, escolha **Source: GitHub Actions**.
+3. Reexecute o workflow [Deploy GitHub Pages](https://github.com/Jessica-Franca/studio-elegancy/actions/workflows/pages.yml).
+
+Depois disso, cada push em `main` atualiza o site.
+
 ## Como testar
 
 Abra a URL acima no navegador. Na primeira visita o protótipo carrega uma massa **fictícia** de clientes, serviços, agendamentos e retornos.
