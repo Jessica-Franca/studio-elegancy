@@ -7,7 +7,7 @@ alwaysApply: true
 
 O diretório raiz deste workspace é o repositório oficial `Jessica-Franca/studio-elegancy`.
 
-O protótipo web oficial está em `prototipo-ui/`.
+O aplicativo web é a raiz do repositório (`index.html`, `css/`, `js/`).
 
 Não criar clones, cópias ou versões alternativas do projeto.
 
@@ -18,8 +18,6 @@ Não utilizar projetos legados como fonte de implementação.
 Todo novo desenvolvimento deve ocorrer neste workspace.
 
 Antes de alterações importantes, verificar o Git root e `git status`.
-
-Não criar nem utilizar uma cópia independente do `prototipo-ui` como fonte de edição.
 
 Depois de testar, revisar o diff e versionar no Git.
 

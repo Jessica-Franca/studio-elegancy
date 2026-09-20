@@ -1,5 +1,6 @@
 DocsCliente/
 studio_elegancy/
+Auditorias/
 .venv/
 venv/
 __pycache__/
@@ -15,5 +16,4 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
-prototipo-ui/Auditorias/
 docs/HORAS_PROJETO.md
