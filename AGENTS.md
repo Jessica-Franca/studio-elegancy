@@ -1,14 +1,20 @@
 # Studio Elegancy — instruções do repositório
 
-Este repositório é a **fonte oficial** do projeto Studio Elegancy.
-
-O desenvolvimento do protótipo web deve ocorrer **exclusivamente** dentro deste repositório.
+O diretório raiz deste workspace é o repositório oficial `Jessica-Franca/studio-elegancy`.
 
 O protótipo web oficial está em `prototipo-ui/`.
 
-Não utilizar cópias externas ou versões duplicadas do protótipo como fonte de desenvolvimento.
+Não criar clones, cópias ou versões alternativas do projeto.
 
-Antes de alterar código, verificar o Git root e `git status`.
+Não trabalhar em diretórios temporários.
+
+Não utilizar projetos legados como fonte de implementação.
+
+Todo novo desenvolvimento deve ocorrer neste workspace.
+
+Antes de alterações importantes, verificar o Git root e `git status`.
+
+O desenvolvimento do protótipo web deve ocorrer **exclusivamente** dentro deste repositório.
 
 Não modificar código legado fora do escopo do protótipo web sem instrução explícita.
 

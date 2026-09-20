@@ -5,13 +5,21 @@ alwaysApply: true
 
 # Fonte oficial
 
-Este repositório GitHub (`Jessica-Franca/studio-elegancy`) é a única fonte de verdade do Studio Elegancy.
+O diretório raiz deste workspace é o repositório oficial `Jessica-Franca/studio-elegancy`.
 
-Todo novo desenvolvimento do protótipo web deve acontecer aqui, em `prototipo-ui/`.
+O protótipo web oficial está em `prototipo-ui/`.
+
+Não criar clones, cópias ou versões alternativas do projeto.
+
+Não trabalhar em diretórios temporários.
+
+Não utilizar projetos legados como fonte de implementação.
+
+Todo novo desenvolvimento deve ocorrer neste workspace.
+
+Antes de alterações importantes, verificar o Git root e `git status`.
 
 Não criar nem utilizar uma cópia independente do `prototipo-ui` como fonte de edição.
-
-Antes de iniciar uma tarefa, verificar o Git root e `git status`.
 
 Depois de testar, revisar o diff e versionar no Git.
 
